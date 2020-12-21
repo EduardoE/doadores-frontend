@@ -10,9 +10,13 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './component/nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastroComponent } from './view/cadastro/cadastro.component';
-import { ConsultaComponent } from './view/consulta/consulta.component';
+import { ConsultaComponent } from './view/consulta/doadores-estado/consulta.component';
 import { HeaderComponent } from './component/header/header.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { TabConsultaComponent } from './component/tab-consulta/tab-consulta.component';
+import { ImcDoadoresComponent } from './view/consulta/imc-doadores/imc-doadores.component';
+import { PercentualObesosComponent } from './view/consulta/percentual-obesos/percentual-obesos.component';
+import { IdadeTiposanguineoComponent } from './view/consulta/idade-tiposanguineo/idade-tiposanguineo.component';
 
 
 
@@ -23,6 +27,10 @@ import { MatTabsModule } from '@angular/material/tabs';
     CadastroComponent,
     ConsultaComponent,
     HeaderComponent,
+    TabConsultaComponent,
+    ImcDoadoresComponent,
+    PercentualObesosComponent,
+    IdadeTiposanguineoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+<ng-container *ngIf="(asyncTabs | async) === null">
+    Loading tabs...
+  </ng-container>
+  
+  <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>Doadores por Estado</ng-template>
+      <app-consulta></app-consulta>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>Media IMC Doadores</ng-template>
+        <app-imc-doadores></app-imc-doadores>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>Percentual de Obesos</ng-template>
+        <app-percentual-obesos></app-percentual-obesos>   
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>Méd. Idade Por Tipo Sanguíneo</ng-template>
+        <app-idade-tiposanguineo></app-idade-tiposanguineo>   
+    </mat-tab>
+    
+
+  </mat-tab-group>

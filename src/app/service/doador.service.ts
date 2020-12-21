@@ -7,13 +7,24 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DoadorService {
 
+  private urlBase: string = "http://localhost:8080/";
   constructor(private http: HttpClient) { }
 
   getDoadoresPorEstado(): Observable<any[]> {
-    return this.http.get<any[]>("http://localhost:8080/doador")
+    return this.http.get<any[]>(this.urlBase + "doador")
   }
 
-  getMediaIMCDoadoresFaixaEtaria(): Observable<string> {
-    return this.http.get<string>("http://localhost:8080/doador/imc")
+  getMediaIMCDoadoresFaixaEtaria(): Observable<any[]> {
+    return this.http.get<any[]>(this.urlBase + "doador/imc")
+  }
+
+  getPercentualObesos(): Observable<any> {
+    return this.http.get<any>(this.urlBase + "doador/obesos")
+  }
+  getMediaIdadePorTipoSanguineo(): Observable<any[]> {
+    return this.http.get<any>(this.urlBase + "doador/media-idade-tiposanguineo");
+  }
+  newDoadores(doadores: any){
+    return this.http.post(this.urlBase + "doador", {"json":doadores});
   }
 }

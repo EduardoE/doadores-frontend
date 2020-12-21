@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DoadorService } from '../../service/doador.service'
+import { DoadorService } from '../../../service/doador.service'
 
 @Component({
   selector: 'app-consulta',

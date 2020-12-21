@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { CadastroComponent } from './view/cadastro/cadastro.component';
-import { ConsultaComponent } from './view/consulta/consulta.component';
+//import { ConsultaComponent } from './view/consulta/consulta.component';
+import { TabConsultaComponent } from './component/tab-consulta/tab-consulta.component';
 
 const routes: Routes = [
   {
@@ -11,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: "consulta",
-    component: ConsultaComponent
+    component: TabConsultaComponent
   }
 ];
 
