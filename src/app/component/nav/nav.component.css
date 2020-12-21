@@ -1,0 +1,15 @@
+.sidenav {
+    width: 150px;
+    background-color: rgb(255, 219, 219);
+    scroll-margin-block: initial ;
+    height: 100;
+}
+
+.sidenav a {
+    font-style: initial;
+}
+
+.content {
+    padding: 16px
+}
+
