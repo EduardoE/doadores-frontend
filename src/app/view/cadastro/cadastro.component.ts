@@ -16,7 +16,7 @@ export class CadastroComponent implements OnInit {
   inputFile(event: any) {
     if (event.target.files && event.target.files[0]) {
       const doadores = event.target.files[0];
-      this.doadorService.newDoadores(doadores).subscribe(resposta => console.log('Ok'));
+      this.doadorService.newDoadores(doadores).subscribe(resposta => console.log(resposta));
 
     }
   }

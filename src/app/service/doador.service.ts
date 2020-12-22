@@ -25,6 +25,21 @@ export class DoadorService {
     return this.http.get<any>(this.urlBase + "doador/media-idade-tiposanguineo");
   }
   newDoadores(doadores: any){
-    return this.http.post(this.urlBase + "doador", {"json":doadores});
+
+    let fd: FormData = new FormData();
+
+    fd.append("file", doadores);
+
+    let documentDTO = JSON.stringify(document);
+
+    fd.append("documentDTO",new Blob([JSON.stringify({
+      "documentDTO": documentDTO})], {
+      type: "application/json"
+      })
+    );
+
+    return this.http.post(this.urlBase + "doador", fd );
+
+    //return this.http.post(this.urlBase + "doador", {"json":doadores}, undefined);
   }
 }
